@@ -14,7 +14,7 @@ public class Testingbaba_script {
 	public static void main(String[] args) {
 
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\dubey\\Downloads\\12_october_automation\\driver\\chromedriver.exe");
+				"C:\\Users\\dubey\\Downloads\\12_october_automation\\chromedriver.exe");
 
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();

@@ -29,7 +29,7 @@ public class Fb_Buypage {
 	public static void initWebDriver(String URL) throws InterruptedException {
 
 		// Setting up Chrome driver path.
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\sd47860\\eclipse-workspace\\12_october_automation\\driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\dubey\\Downloads\\12_october_automation\\chromedriver.exe");
 		// Launching Chrome browser.
 		driver = new ChromeDriver();
 		driver.get(URL);
