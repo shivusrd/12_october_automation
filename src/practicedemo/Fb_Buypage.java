@@ -22,8 +22,11 @@ public class Fb_Buypage {
 	public static String sBookKey = "mobile";
 	private static final String sSearchBox = "q";
 	private static final String sSearchResult = "//li[contains(text(),'in')]//span";
-	private static final String sBookName = "(//a[contains(.,'" + sBookKey + "')])[last()]";
+
+	private static final String sBookName = "(//a[contains(.,'Selenium')])[last()]";
+
 	private static final String sAddToCart = "(//input[contains(@value,'Add to Cart')])[1]";
+
 	private static final String sViewCartXPath = "(//a[contains(.,'view cart')])[1]";
 
 	public static void initWebDriver(String URL) throws InterruptedException {
@@ -46,9 +49,7 @@ public class Fb_Buypage {
 
 		sendEsc.perform();
 		
-		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
-		driver.findElement(By.xpath("//div[contains(text(),'realme Narzo 50A (Oxygen Blue, 128 GB)')]")).click();
-		
+		driver.findElement(By.xpath("//*[@class=\"_3704LK\"]")).sendKeys("Selenium",Keys.ENTER);
 		
 		WebElement searchResult = getElement(By.xpath(sSearchResult));
 		searchResult.click();
