@@ -27,9 +27,13 @@ public class Row_Column
 
 		driver.manage().window().maximize();
 
-		driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div/div[1]/a[1]")).click();
+		driver.findElement(By.xpath("//a[@id='navbtn_tutorials']//i[@class='fa fa-caret-down']")).click();
 
-		driver.findElement(By.xpath("//*[@id=\"leftmenuinnerinner\"]/a[18]")).click();
+		driver.findElement(By.xpath("//a[normalize-space()='Learn HTML']")).click();
+		
+		driver.findElement(By.xpath("//div[@id='sidenav']//a[18]")).click();
+		
+		
 
 		int row = driver.findElements(By.xpath("//*[@id=\"customers\"]/tbody/tr")).size();
 		System.out.println(row);
@@ -43,8 +47,9 @@ public class Row_Column
 		for (int i = 0; i <= 17; i++) {
 
 			String actual = list.get(i).getText();
-
-			System.out.println(actual);
+			System.out.println("" + "");
+			System.out.print(actual+"\n");
+			
 			continue;
 		}
 
